@@ -41,7 +41,7 @@ export default function ReincarnatePage() {
 
       // 重新登录或直接访问转世页时，从服务端获取最近坐化角色信息
       try {
-        const res = await fetch('/api/cultivators/reincarnate-context');
+        const res = await fetch('/api/cultivator/reincarnate-context');
         const json = await res.json();
         if (!res.ok || !json.success || !json.data) return;
         if (!cancelled) {
